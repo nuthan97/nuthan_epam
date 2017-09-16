@@ -26,48 +26,93 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student[] getStudents() {
 		// Add your implementation here
+		while(student!=NULL)
+		{
+			return students;
+		}
 		return null;
 	}
-
+	
 	@Override
 	public void setStudents(Student[] students) {
 		// Add your implementation here
+		int number;
+		student[number]=students[];
+		number++;
 	}
 
 	@Override
 	public Student getStudent(int index) {
 		// Add your implementation here
+		if(student==NULL)
+			throw new IllegalArgumentException("not valid");
+		else 
+		{
+		  return students[index];
+		}
 		return null;
 	}
 
 	@Override
 	public void setStudent(Student student, int index) {
 		// Add your implementation here
+	  student[index]=students;
+	  index++;
 	}
-
+ 
 	@Override
 	public void addFirst(Student student) {
 		// Add your implementation here
+		int i=0;
+		if(student==NULL)
+			throw new IllegalArgumentsException("Invalid");
+		while(students[i]==Null)
+		{
+			 i++;
+		}
+		students[i]=student;
 	}
 
 	@Override
 	public void addLast(Student student) {
 		// Add your implementation here
+		int i=0;
+		if(student==NULL)
+			throw new IllegalArgumentException("not valid");
+		while(students[i]!=NULL)
+		{
+			i++;
+		}
+		students[i]=student;
 	}
 
 	@Override
 	public void add(Student student, int index) {
 		// Add your implementation here
+		if(student==NULL || index<0 || index>students.length)
+			throw new IllegalArgumentException("not valid");
+		students[index]=student;
 	}
 
 	@Override
 	public void remove(int index) {
 		// Add your implementation here
+		while(student!=NULL)
+		{
+			 student=students[index];
+			 index--;
+		}
 	}
 
 	@Override
 	public void remove(Student student) {
 		// Add your implementation here
+		int i=0;
+		while(student[i!=NULL])
+		{
+			 i--;
+		}
+		student=students[i];
 	}
 
 	@Override
