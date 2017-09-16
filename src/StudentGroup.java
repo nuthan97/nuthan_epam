@@ -14,6 +14,7 @@ import java.util.Date;
 public class StudentGroup implements StudentArrayOperation {
 
 	private Student[] students;
+	private Student[] s;
 	
 	/**
 	 * DO NOT remove or change this constructor, it will be used during task check
@@ -26,9 +27,10 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student[] getStudents() {
 		// Add your implementation here
+		 
 		return students;
 	}
-	
+
 	@Override
 	public void setStudents(Student[] students) {
 		// Add your implementation here
@@ -54,18 +56,18 @@ public class StudentGroup implements StudentArrayOperation {
 			throw new IllegalArgumentException();
 		students[index]=student;
 	}
- 
+
 	@Override
 	public void addFirst(Student student) {
 		// Add your implementation here
-		i=0;	
-		if(student==null)
-				throw new IllegalArgumentException();
-			while(students[i]!=null)
-			{	students[i+1]=students[i];
-			    i++;
-			}
-			students[0]=student;
+int i=0;	
+	if(student==null)
+			throw new IllegalArgumentException();
+		while(students[i]!=null)
+		{	students[i+1]=students[i];
+		    i++;
+		}
+		students[0]=student;
 	}
 
 	@Override
@@ -79,12 +81,12 @@ public class StudentGroup implements StudentArrayOperation {
 			i++;
 		}		
        students[i]=student;		
-	}
+		}
 
 	@Override
 	public void add(Student student, int index) {
 		// Add your implementation here
-		int i=0,t,j=0;
+        int i=0,t,j=0;
 		if(student==null || index<0 || index>students.length)
 			throw new IllegalArgumentException();
 		while(i<index)
@@ -101,6 +103,7 @@ public class StudentGroup implements StudentArrayOperation {
 			i++;
 			
 		}
+
 	}
 
 	@Override
@@ -116,6 +119,7 @@ public class StudentGroup implements StudentArrayOperation {
 			students[i]=students[i+1];
 			i++;
 		}
+	
 	}
 
 	@Override
@@ -184,7 +188,6 @@ public class StudentGroup implements StudentArrayOperation {
 		i++;
 		students[i]=null;
 		}
-		
 	}
 
 	@Override
@@ -231,6 +234,7 @@ public class StudentGroup implements StudentArrayOperation {
 		    j++;
 		}
 		}
+		
 	}
 
 	@Override
@@ -257,37 +261,38 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public Student[] getByBirthDate(Date date) {
-		// Add your implementation here
 		return null;
 	}
 
 	@Override
 	public Student[] getBetweenBirthDates(Date firstDate, Date lastDate) {
-		// Add your implementation here
+		
 		return null;
 	}
 
 	@Override
 	public Student[] getNearBirthDate(Date date, int days) {
 		// Add your implementation here
+		
 		return null;
 	}
 
 	@Override
 	public int getCurrentAgeByDate(int indexOfStudent) {
 		// Add your implementation here
+		
 		return 0;
 	}
 
 	@Override
 	public Student[] getStudentsByAge(int age) {
-		// Add your implementation here
 		return null;
 	}
 
 	@Override
 	public Student[] getStudentsWithMaxAvgMark() {
 		// Add your implementation here
+		
 		return null;
 	}
 
@@ -308,4 +313,5 @@ public class StudentGroup implements StudentArrayOperation {
 			
 		}
 		return null;
+	}
 }
